@@ -121,7 +121,7 @@ export default function HomePage() {
         <div className="absolute top-40 right-32 w-1 h-1 bg-blue-400 rounded-full animate-pulse" style={{ animationDelay: '1s' }}></div>
         <div className="absolute bottom-32 left-40 w-1.5 h-1.5 bg-violet-400 rounded-full animate-pulse" style={{ animationDelay: '2s' }}></div>
 
-        <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4">
+        <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 py-15">
           <div className="text-center max-w-4xl mx-auto">
             {/* Logo */}
             <div className="mb-8 flex justify-center">
