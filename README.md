@@ -19,6 +19,15 @@ pnpm dev
 # or
 bun dev
 ```
+
+## Scripts
+Useful scripts for managing the database schema and studio interface using Drizzle ORM:
+```
+npm run db:generate   # Generate Drizzle migration files
+npm run db:migrate    # Push migrations to the database
+npm run db:studio     # Launch Drizzle Studio for visual schema management
+
+```
 Open [`http://localhost:3000`](http://localhost:3000) in your browser to see the result.
 
 You can start editing the app by modifying `app/page.tsx.` The page auto-updates as you save changes.
