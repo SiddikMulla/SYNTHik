@@ -1,8 +1,14 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SYNTHik AI
+
+**SYNTHik AI** is a full-stack AI chatbot powered by **LLaMA 3.1 via Ollama**, integrated with **Clerk authentication**, a modern **Next.js (App Router)** frontend, and a type-safe database layer using **Drizzle ORM** with **SQLite (for development)** and **PostgreSQL (for production deployment)**.
+
+This project was bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app) using the App Router and TypeScript.
+
+---
 
 ## Getting Started
 
-First, run the development server:
+To run the development server locally:
 
 ```bash
 npm run dev
@@ -14,23 +20,45 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Scripts
+Useful scripts for managing the database schema and studio interface using Drizzle ORM:
+```
+npm run db:generate   # Generate Drizzle migration files
+npm run db:migrate    # Push migrations to the database
+npm run db:studio     # Launch Drizzle Studio for visual schema management
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+Open [`http://localhost:3000`](http://localhost:3000) in your browser to see the result.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+You can start editing the app by modifying `app/page.tsx.` The page auto-updates as you save changes.
 
-## Learn More
+# Project Tech Stack
 
-To learn more about Next.js, take a look at the following resources:
+## Frontend
+- **Framework:** Next.js (App Router, TypeScript)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Authentication
+- **Provider:** Clerk.dev
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## AI Model
+- **Provider:** Ollama
+- **Model:** Meta LLaMA 3.1 (8B)
 
-## Deploy on Vercel
+## Database
+- **ORM:** Drizzle ORM
+- **Development:** SQLite
+- **Production:** PostgreSQL (via Neon or Supabase)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Styling
+- **CSS Framework:** Tailwind CSS
+- **Fonts:** next/font with Geist
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Create a `.env.local` file in the root and define the following variables:
+```
+CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
+CLERK_SECRET_KEY=your_clerk_secret_key
+OLLAMA_API_URL=http://localhost:11434  # or remote Ollama endpoint
+```
+
+
+<div align="center">SYNTHik</div>
