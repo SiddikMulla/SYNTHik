@@ -11,13 +11,11 @@ This project was bootstrapped with [`create-next-app`](https://nextjs.org/docs/a
 To run the development server locally:
 
 ```bash
+npm i
+
 npm run dev
 # or
-yarn dev
-# or
 pnpm dev
-# or
-bun dev
 ```
 
 ## Scripts
